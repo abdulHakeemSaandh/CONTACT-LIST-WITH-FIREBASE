@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo User List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Todo User List</h1>
+
+        <!-- Add User Form -->
+        <div class="form">
+
+            <input type="text" id="username" placeholder="Add Username">
+
+            <input type="email" id="email" placeholder="Add Email">
+
+            <button onclick="addNewTodo()">
+                Add User
+            </button>
+
+        </div>
+
+        <!-- Search Bar -->
+        <!-- <div class="search-box">
+
+            <input type="text" id="search" placeholder="Search username or email...">
+
+        </div> -->
+
+        <!-- User List -->
+        <div id="cardContainer"></div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-database-compat.js"></script>
+
+    <script>
+
+        const firebaseConfig = {
+    apiKey: "AIzaSyBqtXHzcG3EjzSl1Q5Tp3BP_YVH4glSKYI",
+    authDomain: "contact-list-web-firebase.firebaseapp.com",
+    databaseURL: "https://contact-list-web-firebase-default-rtdb.firebaseio.com",
+    projectId: "contact-list-web-firebase",
+    storageBucket: "contact-list-web-firebase.firebasestorage.app",
+    messagingSenderId: "412482423857",
+    appId: "1:412482423857:web:93c1ca46678ef19ee55910"
+  };
+
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
